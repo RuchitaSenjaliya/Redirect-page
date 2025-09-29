@@ -87,8 +87,8 @@ body {
   }
 
   .logo {
-    width: 90px;
-    height: 90px;
+    width: 220px;
+    height: 80px;
   }
 
   .title {
@@ -100,6 +100,19 @@ body {
   }
 }
 
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .container {
+    max-width: 420px;
+    padding: 28px;
+  }
+
+  .logo {
+    width: 240px;
+    height: 80px;
+  }
+    
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 450px;
@@ -107,7 +120,7 @@ body {
   }
 
   .logo {
-    width: 140px;
-    height: 140px;
+    width: 270px;
+    height: 80px;
   }
 }
