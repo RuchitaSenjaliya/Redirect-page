@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>App Redirect</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Redirect</title>
+    <link rel="stylesheet" href="styles.css" />
     <script>
       // Replace these URLs with your app's actual links
       const iosAppStoreURL =
@@ -13,10 +15,9 @@
 
       function openApp() {
         const now = Date.now();
-        // Attempt to open the app via deep link
         window.location = deepLinkURL;
 
-        // If app not installed, redirect to store after 1 second
+        // If app not installed, redirect to store after 1.5 sec
         setTimeout(() => {
           if (Date.now() - now < 1500) {
             const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -26,17 +27,30 @@
               window.location = androidPlayStoreURL;
             }
           }
-        }, 1000);
+        }, 1500);
       }
 
       window.onload = openApp;
     </script>
   </head>
   <body>
-    <h2>Redirecting...</h2>
-    <p>
-      If nothing happens,
-      <a href="https://www.indiabazaardfw.com/">click here</a>.
-    </p>
+    <div class="container">
+      <div class="logo-wrapper">
+        <img
+          src="./images/ib-app-dark.png"
+          alt="India Bazaar Logo"
+          class="logo"
+        />
+      </div>
+      <h2 class="title">Redirecting to India Bazaar...</h2>
+      <p class="description">
+        If nothing happens,
+        <a
+          href="https://play.google.com/store/apps/details?id=com.indiabazaar.app"
+          class="link"
+          >click here</a
+        >.
+      </p>
+    </div>
   </body>
 </html>
