@@ -11,7 +11,7 @@
         "https://apps.apple.com/in/app/india-bazaar/id778052877";
       const androidPlayStoreURL =
         "https://play.google.com/store/apps/details?id=com.indiabazaar.app";
-      const deepLinkURL = "myapp://open"; // Your custom scheme
+      const deepLinkURL = "myapp://reward"; // Your custom scheme
 
       function openApp() {
         const now = Date.now();
@@ -43,14 +43,17 @@
         />
       </div>
       <h2 class="title">Redirecting to India Bazaar...</h2>
-      <p class="description">
-        If nothing happens,
+      <div id="content">
+        <p>Don't have the app yet?</p>
         <a
           href="https://play.google.com/store/apps/details?id=com.indiabazaar.app"
-          class="link"
-          >click here</a
-        >.
-      </p>
+          class="btn"
+          >Get on Google Play</a
+        >
+        <a href="https://apps.apple.com/app/idYOUR_APP_ID" class="btn"
+          >Download on App Store</a
+        >
+      </div>
     </div>
   </body>
 </html>
